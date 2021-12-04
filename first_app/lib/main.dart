@@ -31,10 +31,28 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('제목'),
       ),
-      body: SingleChildScrollView(
-        child: ListBody(
-          children: items.map((i) => Text('$i')).toList(),
-        )
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: <Widget>[
+          ListTile(
+            leading: const Icon(Icons.home),
+            title: const Text('Home'),
+            trailing: const Icon(Icons.navigate_next),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.event),
+            title: const Text('Event'),
+            trailing: const Icon(Icons.navigate_next),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.camera),
+            title: const Text('Camera'),
+            trailing: const Icon(Icons.navigate_next),
+            onTap: () {},
+          ),
+        ]
       )
     );
   }
